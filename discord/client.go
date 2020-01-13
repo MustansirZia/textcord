@@ -76,12 +76,12 @@ func (c *client) Guilds() ([]Guild, error) {
 }
 
 func (c *client) Channels(guild Guild) ([]Channel, error) {
-	userGuild, err := c.session.Guild(guild.ID)
+	userChannels, err := c.session.GuildChannels(guild.ID)
 	if err != nil {
 		return nil, err
 	}
-	channels := make([]Channel, 0, len(userGuild.Channels))
-	for _, userChannel := range userGuild.Channels {
+	channels := make([]Channel, 0, len(userChannels))
+	for _, userChannel := range userChannels {
 		channels = append(channels, Channel{
 			entity: entity{
 				ID:   userChannel.ID,
