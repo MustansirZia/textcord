@@ -118,7 +118,7 @@ func (c *client) SendMessage(channel Channel, message string) error {
 
 // NewClient - Gets a new Discord client.
 func NewClient(config ClientConfig) (Client, error) {
-	s, err := discordgo.New(config.Token)
+	s, err := discordgo.New(config.Token())
 	if err != nil {
 		return nil, err
 	}
