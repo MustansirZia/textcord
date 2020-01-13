@@ -1,6 +1,6 @@
 # SIMCORD
 
-[![Documentation](https://godoc.org/github.com/mustansirzia/simcord?status.svg)](http://godoc.org/github.com/mustansirzia/go-rethinklogger)
+[![Documentation](https://godoc.org/github.com/mustansirzia/simcord?status.svg)](http://godoc.org/github.com/mustansirzia/simcord)
 [![Go Report Card](https://goreportcard.com/badge/github.com/MustansirZia/simcord)](https://goreportcard.com/report/github.com/MustansirZia/simcord)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
