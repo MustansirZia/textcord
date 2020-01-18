@@ -1,0 +1,6 @@
+{
+    "cleanUrls": true,
+    "env": {
+        "DISCORD_TOKEN": "@discord-token"
+    }
+}
