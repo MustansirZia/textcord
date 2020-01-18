@@ -2,6 +2,7 @@ package discord
 
 import (
 	"errors"
+	"fmt"
 	"os"
 	"strings"
 )
@@ -34,6 +35,8 @@ func NewConfig() (ClientConfig, error) {
 	if !found {
 		return nil, errors.New("DISCORD_TOKEN environment variable missing")
 	}
+
+	fmt.Println(discordToken)
 
 	return &clientEnvConfig{
 		discordToken,
