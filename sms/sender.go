@@ -5,7 +5,7 @@ import (
 )
 
 // Sender - Implementations of this
-// will be used to send SMSes.
+// will be used to send SMSes. (If required)
 type Sender interface {
 	// Send - To send a new SMS.
 	Send(phoneNumber, message string) error

@@ -1,6 +1,8 @@
 package discord
 
 import (
+	"fmt"
+	"sort"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
@@ -14,32 +16,36 @@ type Client interface {
 
 	// Channels - Returns the channels inside a a particular
 	// guild or server this user or bot is added to.
-	Channels(guild Guild) ([]Channel, error)
+	Channels(guildID string) ([]Channel, error)
 
 	// Messages - Returns the last "count" of messages for this
 	// channel.
-	Messages(channel Channel, count int) ([]Message, error)
+	Messages(channelID string, count int) ([]Message, error)
 
 	// SendMessage - To send a message to a channel.
-	SendMessage(channel Channel, message string) error
+	SendMessage(channelID string, message string) error
 }
 
-type entity struct {
-	// Snowflake ID of the entity.
+type resource struct {
+	// Snowflake ID of the resource.
 	ID string
 
-	// Name of the entity.
+	// Name of the resource.
 	Name string
+}
+
+func (e resource) String() string {
+	return fmt.Sprintf("%s: %s", e.Name, e.ID)
 }
 
 // Guild - A server.
 type Guild struct {
-	entity
+	resource
 }
 
 // Channel - A text channel inside a server.
 type Channel struct {
-	entity
+	resource
 }
 
 // Message - Represents a text message inside a channel.
@@ -54,6 +60,10 @@ type Message struct {
 	SentAt time.Time
 }
 
+func (m Message) String() string {
+	return fmt.Sprintf("%s at %s: %s", m.Sender, m.SentAt.Format("02 Jan 06 15:04"), m.Text)
+}
+
 type client struct {
 	session *discordgo.Session
 }
@@ -66,7 +76,7 @@ func (c *client) Guilds() ([]Guild, error) {
 	guilds := make([]Guild, 0, len(userGuilds))
 	for _, userGuild := range userGuilds {
 		guilds = append(guilds, Guild{
-			entity: entity{
+			resource: resource{
 				ID:   userGuild.ID,
 				Name: userGuild.Name,
 			}})
@@ -75,24 +85,27 @@ func (c *client) Guilds() ([]Guild, error) {
 
 }
 
-func (c *client) Channels(guild Guild) ([]Channel, error) {
-	userChannels, err := c.session.GuildChannels(guild.ID)
+func (c *client) Channels(guildID string) ([]Channel, error) {
+	userChannels, err := c.session.GuildChannels(guildID)
 	if err != nil {
 		return nil, err
 	}
 	channels := make([]Channel, 0, len(userChannels))
 	for _, userChannel := range userChannels {
-		channels = append(channels, Channel{
-			entity: entity{
-				ID:   userChannel.ID,
-				Name: userChannel.Name,
-			}})
+		if userChannel.Type == discordgo.ChannelTypeGuildText {
+			// Filter out non text channels.
+			channels = append(channels, Channel{
+				resource: resource{
+					ID:   userChannel.ID,
+					Name: userChannel.Name,
+				}})
+		}
 	}
 	return channels, nil
 }
 
-func (c *client) Messages(channel Channel, count int) ([]Message, error) {
-	userMessages, err := c.session.ChannelMessages(channel.ID, count, "", "", "")
+func (c *client) Messages(channelID string, count int) ([]Message, error) {
+	userMessages, err := c.session.ChannelMessages(channelID, count, "", "", "")
 	if err != nil {
 		return nil, err
 	}
@@ -105,11 +118,15 @@ func (c *client) Messages(channel Channel, count int) ([]Message, error) {
 			SentAt: sentAt,
 		})
 	}
+	// Sorting so that latest messages appear at the end of the slice.
+	sort.Slice(messages, func(i, j int) bool {
+		return messages[i].SentAt.Before(messages[j].SentAt)
+	})
 	return messages, nil
 }
 
-func (c *client) SendMessage(channel Channel, message string) error {
-	_, err := c.session.ChannelMessageSend(channel.ID, message)
+func (c *client) SendMessage(channelID string, message string) error {
+	_, err := c.session.ChannelMessageSend(channelID, message)
 	if err != nil {
 		return err
 	}

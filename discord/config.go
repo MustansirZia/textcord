@@ -27,9 +27,9 @@ func (e *clientEnvConfig) IsBot() bool {
 	return strings.Contains(e.token, "Bot ")
 }
 
-// NewEnvConfig - Provides a new config from environment variables
+// NewConfig - Provides a new config from environment variables
 // for discord client.
-func NewEnvConfig() (ClientConfig, error) {
+func NewConfig() (ClientConfig, error) {
 	discordToken, found := os.LookupEnv("DISCORD_TOKEN")
 	if !found {
 		return nil, errors.New("DISCORD_TOKEN environment variable missing")
