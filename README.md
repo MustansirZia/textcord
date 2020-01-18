@@ -6,7 +6,7 @@
 
 <br />
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/mustansizia/simcord)
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/MustansirZia/simcord)
 
 Serverless functions/API to forward SMS messages to a [Discord](https://discordapp.com/) guild text channel. Can also be used to query messages from a Discord guild text channel via SMS.
 
