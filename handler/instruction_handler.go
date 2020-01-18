@@ -98,6 +98,6 @@ func convertResourceSliceToString(resources interface{}) string {
 	default:
 		log.Fatal("Unknown argument given to convertResourceSliceToString")
 	}
-	return strings.Join(resourcesAsString, "\n\n")
+	return strings.Join(resourcesAsString, "\n")
 
 }
