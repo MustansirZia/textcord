@@ -24,7 +24,7 @@ func init() {
 }
 
 // HandleInstruction - Function which does the actual handling of the instruction
-// and resolves an instruction in a string response which can be sent to the client.
+// and resolves an instruction to a string response which can be sent to the client.
 func HandleInstruction(instruction *parser.Instruction) (string, error) {
 	if instruction.Type == parser.GET {
 		return handleGetInstruction(instruction)
