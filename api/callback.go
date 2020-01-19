@@ -43,7 +43,11 @@ func Callback(w http.ResponseWriter, r *http.Request) {
 
 func handleError(w http.ResponseWriter, err error) {
 	fmt.Println(err.Error())
-	http.Error(w, err.Error(), http.StatusInternalServerError)
+	w.Header().Add("content-type", "text/plain; charset=utf-8")
+	// Sending a 200 and not a 500 because we want the response to be
+	// sent back to the client.
+	fmt.Fprint(w, err.Error())
+	// http.Error(w, err.Error(), http.StatusInternalServerError)
 }
 
 func sendResponse(w http.ResponseWriter, response string) {
