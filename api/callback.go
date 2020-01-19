@@ -47,5 +47,6 @@ func handleError(w http.ResponseWriter, err error) {
 }
 
 func sendResponse(w http.ResponseWriter, response string) {
+	w.Header().Add("content-type", "text/plain; charset=utf-8")
 	fmt.Fprint(w, response)
 }
