@@ -9,7 +9,7 @@
     "start": "vuepress dev",
     "build": "vuepress build"
   },
-  "devDependencies": {
+  "dependencies": {
     "vuepress": "^1.2.0"
   }
 }
