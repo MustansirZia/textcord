@@ -1,0 +1,12 @@
+{
+  "name": "simcord",
+  "version": "1.0.0",
+  "description": "Documentation for Simcord.",
+  "repository": "git@github.com:MustansirZia/simcord.git",
+  "author": "Mustansir Zia <mustansir29@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev",
+    "build": "vuepress build"
+  }
+}
