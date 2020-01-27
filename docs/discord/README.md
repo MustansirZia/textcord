@@ -1,1 +1,1 @@
-# Getting a Discord Token
+# Generate a Discord Token

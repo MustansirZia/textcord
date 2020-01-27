@@ -16,6 +16,6 @@ The instructions are divided into **three** categories that we need to cover one
 <br />
 
 ## Ready to Start?
-::: tip Ready to Start?
+::: tip Ready to start?
 Head over to the [Generate a Discord Token](/discord/) page or click on the link at the bottom.
 :::
