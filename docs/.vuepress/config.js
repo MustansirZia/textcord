@@ -23,5 +23,13 @@ module.exports = {
             ]
         },
       ]
-    }
+    },
+    plugins: [
+      [
+        '@vuepress/google-analytics',
+        {
+          'ga': 'UA-138243193-2'
+        }
+      ]
+    ]
   }
