@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "build": "cd docs && npm i --scripts-prepend-node-path && npm run build --scripts-prepend-node-path && cp -r .vuepress/dist ../public"
+        "build": "cd docs && npm install --scripts-prepend-node-path && npm run build --scripts-prepend-node-path && cp -r .vuepress/dist ../public"
     }
 }
