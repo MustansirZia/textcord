@@ -1,2 +1,4 @@
 cmd/simcord/simcord
 .env
+public
+.now
