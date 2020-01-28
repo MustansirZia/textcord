@@ -1,4 +1,5 @@
 cmd/simcord/simcord
 .env
 public
+!docs/.vuepress/public
 .now
