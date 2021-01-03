@@ -6,7 +6,7 @@
 
 <br />
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/MustansirZia/simcord)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMustansirZia%2Fsimcord&env=DISCORD_TOKEN&envDescription=Add%20the%20discord%20token%20from%20the%20previous%20step.&envLink=https%3A%2F%2Fsimcord.now.sh%2Fdiscord%2F&project-name=my-simcord&repository-name=my-simcord)
 
 Serverless function/API to forward SMS messages to a [Discord](https://discordapp.com/) guild text channel. Can also be used to query messages from a Discord guild text channel via SMS.
 

@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "build": "cd docs && yarn && yarn build && cp -r .vuepress/dist ../public"
+        "build": "cd docs && yarn && yarn build && cp -r .vuepress/dist ../public",
+        "docs": "cd docs && yarn start"
     }
 }

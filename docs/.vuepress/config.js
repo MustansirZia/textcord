@@ -19,6 +19,7 @@ module.exports = {
             children: [
               ['/introduction/', 'Introduction'],
               ['/discord/', 'Generate Discord Token'],
+              ['/deploy/', 'Go Live!'],
               ['/sms/', 'SMS Gateway Configuration']
             ]
         },
