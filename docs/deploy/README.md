@@ -12,7 +12,7 @@ Unlike the rest of the steps this step is in fact the easiest and is also my fav
 
 1. Login to your GitHub, GitLab or BitBucket account. Create an account if you don't have one from [here](https://github.com/join?source=login).
 
-2. Head over [here](https://vercel.com/login) and create a Vercel account. You can use your existing existing GitHub, GitLab or BitBucket account to signup quickly.
+2. Now, head over [here](https://vercel.com/login) and create a Vercel account. You can use your existing existing GitHub, GitLab or BitBucket account to signup quickly.
 
 ## Deployment
 
