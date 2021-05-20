@@ -1,8 +1,8 @@
 module.exports = {
-    title: "Simcord",
+    title: "Textcord",
     description: "Serverless function/API for sending and receiving messages from a Discord text channel via SMS.",
     themeConfig: {
-      repo: 'MustansirZia/simcord',
+      repo: 'MustansirZia/textcord',
       repoLabel: 'GitHub',
       docsDir: 'docs',
       editLinks: true,
