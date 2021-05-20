@@ -1,4 +1,4 @@
-# SIMCORD
+# TEXTCORD
 
 [![Documentation](https://godoc.org/github.com/mustansirzia/simcord?status.svg)](http://godoc.org/github.com/MustansirZia/simcord)
 [![Go Report Card](https://goreportcard.com/badge/github.com/MustansirZia/simcord)](https://goreportcard.com/report/github.com/MustansirZia/simcord)
