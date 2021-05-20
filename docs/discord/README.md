@@ -22,7 +22,7 @@ To get a Bot token we need to, well add a Bot, right?
 
 ![New Discord Application](/discord-1.png)
 
-3. In the dialog give it a name you like. If you're unsure just type *Simcord* and hit **Create**.
+3. In the dialog give it a name you like. If you're unsure just type *Textcord* and hit **Create**.
 <br />
 
 ![Created Application](/discord-2.png)
