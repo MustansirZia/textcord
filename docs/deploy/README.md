@@ -39,7 +39,7 @@ We have now deployed a serverless API without breaking a sweat!
 
 7. Upon deployment you should see a page like this. Tap on <b>Visit</b> to see this very website hosted now from your own account! 
 
-8. Note down the address for this website. We're going to need this later when we hook up our SMS gateway. It should be something like `https://my-simcord.vercel.app`.
+8. Note down the address for this website. We're going to need this later when we hook up our SMS gateway. It should be something like `https://my-textcord.vercel.app`.
 
 ## Ready for More?
 ::: tip Ready for More?
