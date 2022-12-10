@@ -888,7 +888,7 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-google-analytics@^1.2.0":
+"@vuepress/plugin-google-analytics@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.2.0.tgz#54555fd14f01a032c5acff04ecbbe0911577d7d0"
   integrity sha512-0zol5D4Efb5GKel7ADO/s65MLtKSLnOEGkeWzuipkWomSQPzP7TJ3+/RcYBnGdyBFHd1BSpTUHGK0b/IGwM3UA==
@@ -5546,9 +5546,9 @@ qs@6.7.0:
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^5.0.1:
   version "5.1.1"
@@ -6917,7 +6917,7 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress@^1.2.0:
+vuepress@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.2.0.tgz#2f2cdf337ad40a3e4866dfd33e97b840db386af7"
   integrity sha512-EfHo8Cc73qo+1Pm18hM0qOGynmDr8q5fu2664obynsdCJ1zpvoShVnA0Msraw4SI2xDc0iAoIb3dTwxUIM8DAw==
